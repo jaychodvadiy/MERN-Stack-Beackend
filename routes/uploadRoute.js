@@ -1,6 +1,6 @@
 const express = require("express");
 const { uploadImages, deleteImages } = require("../controllers/uploadCtrl.js");
-const { isAdmin, authMiddleware } = require("../middlewares/authMiddleware. js");
+const { isAdmin, authMiddleware } = require("../middlewares/authMiddleware.js");
 const { uploadPhoto, productImgResize } = require("../middlewares/uploadImage.js");
 const router = express.Router();
 

@@ -1,11 +1,10 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const dbConnect = require("./config/dbConnect.js");
-const { notFound, errorHandler } = require("./middlewares/errorMiddleware.js");
+const {notFound, errorHandler} = require('./middlewares/errorHandler.js')
 const app = express();
 const dotenv = require("dotenv").config();
 const PORT = 5000;
-// const authRoute = require('./routes/authRoute');
 const authRoute = require("./routes/authRoutes.js");
 
 const productRouter = require("./routes/productRoutes.js");
@@ -27,7 +26,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use("/api/user", authRouter);
+app.use("/api/user", authRoute);
 app.use("/api/product", productRouter);
 app.use("/api/blog", blogRouter);
 app.use("/api/category", categoryRouter);
