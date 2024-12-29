@@ -8,9 +8,9 @@ const {
   liketheBlog,
   disliketheBlog,
   uploadImages,
-} = require("../controller/blogCtrl");
-const { authMiddleware, isAdmin } = require("../middlewares/authMiddleware");
-const { blogImgResize, uploadPhoto } = require("../middlewares/uploadImage");
+} = require("../controllers/blogCtrl.js");
+const { authMiddleware, isAdmin } = require("../middlewares/authMiddleware.js");
+const { blogImgResize, uploadPhoto } = require("../middlewares/uploadImage.js");
 const router = express.Router();
 
 router.post("/", authMiddleware, isAdmin, createBlog);

@@ -1,8 +1,8 @@
-const Blog = require("../models/blogModel");
-const User = require("../models/userModel");
+const Blog = require("../models/blogModel.js");
+const User = require("../models/userModel.js");
 const asyncHandler = require("express-async-handler");
-const validateMongoDbId = require("../utils/validateMongodbId");
-const cloudinaryUploadImg = require("../utils/cloudinary");
+const validateMongoDbId = require("../utils/validateMongoDbId.js");
+const cloudinaryUploadImg = require("../utils/cloudinary.js");
 const fs = require("fs");
 const createBlog = asyncHandler(async (req, res) => {
   try {

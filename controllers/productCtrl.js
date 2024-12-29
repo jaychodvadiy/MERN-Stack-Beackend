@@ -1,8 +1,8 @@
-const Product = require("../models/productModel");
-const User = require("../models/userModel");
+const Product = require("../models/productModel.js");
+const User = require("../models/userModel.js");
 const asyncHandler = require("express-async-handler");
 const slugify = require("slugify");
-const validateMongoDbId = require("../utils/validateMongodbId");
+const validateMongoDbId = require("../utils/validateMongoDbId.js");
 
 const createProduct = asyncHandler(async (req, res) => {
   try {

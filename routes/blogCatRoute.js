@@ -5,8 +5,8 @@ const {
   deleteCategory,
   getCategory,
   getallCategory,
-} = require("../controller/blogCatCtrl");
-const { authMiddleware, isAdmin } = require("../middlewares/authMiddleware");
+} = require("../controllers/blogCatCtrl.js");
+const { authMiddleware, isAdmin } = require("../middlewares/authMiddleware.js");
 const router = express.Router();
 
 router.post("/", authMiddleware, isAdmin, createCategory);

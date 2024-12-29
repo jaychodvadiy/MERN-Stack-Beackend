@@ -1,18 +1,18 @@
-const User = require("../models/userModel");
-const Product = require("../models/productModel");
-const Cart = require("../models/cartModel");
-const Coupon = require("../models/couponModel");
-const Order = require("../models/orderModel");
+const User = require("../models/userModel.js");
+const Product = require("../models/productModel.js");
+const Cart = require("../models/cartModel.js");
+const Coupon = require("../models/couponModel.js");
+const Order = require("../models/orderModel.js");
 const uniqid = require("uniqid");
 
 const asyncHandler = require("express-async-handler");
-const { generateToken } = require("../config/jwtToken");
-const validateMongoDbId = require("../utils/validateMongodbId");
-const { generateRefreshToken } = require("../config/refreshtoken");
+const { generateToken } = require("../config/jwtToken.js");
+const validateMongoDbId = require("../utils/validateMongoDbId.js");
+const { generateRefreshToken } = require("../config/refreshtoken.js");
 const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
-const sendEmail = require("./emailCtrl");
-const { createPasswordResetToken } = require("../models/userModel");
+const sendEmail = require("./emailCtrl.js");
+const { createPasswordResetToken } = require("../models/userModel.js");
 
 // Create a User ----------------------------------------------
 
